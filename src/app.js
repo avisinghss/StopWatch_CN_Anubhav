@@ -1,7 +1,7 @@
 var min = 0;
 var sec = 0;
 var miliSec = 0;
-var microSec = 0; 
+var microSec = 0;
 var timer;
 
 function callTimer() {
