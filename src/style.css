@@ -1,32 +1,50 @@
-@font-face{
-    font-family: digital-7;
-    src: url(fonts/digital-7.ttf);
+@font-face {
+  font-family: digital-7;
+  src: url(fonts/digital-7.ttf);
 }
 
 body {
-    color: #014831;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;  
-    background-color: #171A21;
-    background-image: url(../images/clock.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-}
-div{
-    min-width: 20%;
-    max-width: 100%;
-    margin: 100px auto;
+  color: #014831;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;  
+  background-color: #171A21;
 }
 
-#heading{
-    margin-top: 125px;
-    text-decoration: underline;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-#timer{
-    font-size: 2.5em;
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/clock.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 95%;
+  z-index: -1;
+}
+
+.container {
+  min-width: 20%;
+  max-width: 100%;
+  margin: 100px auto;
+}
+
+#heading {
+  margin-top: 125px;
+  text-decoration: underline;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#timer {
+  font-size: 2.5em;
 }
 
 #start {
@@ -34,11 +52,11 @@ div{
   text-align: center;
   color: #DAD6D6;
   background: #48633B;
-  border:solid 2px #35492C;
-  border-radius:5px;
-  padding:16px 40px 16px;
+  border: solid 2px #35492C;
+  border-radius: 5px;
+  padding: 16px 40px 16px;
   letter-spacing: 2px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 #stop {
@@ -46,11 +64,11 @@ div{
   text-align: center;
   color: #DAD6D6;
   background: #721329;
-  border:solid 2px #590F20;
-  border-radius:5px;
-  padding:16px 40px 16px;
+  border: solid 2px #590F20;
+  border-radius: 5px;
+  padding: 16px 40px 16px;
   letter-spacing: 2px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 #reset {
@@ -58,16 +76,22 @@ div{
   text-align: center;
   color: #DAD6D6;
   background: #564E58;
-  border:solid 2px #3E383F;
-  border-radius:5px;
-  padding:16px 40px 16px;
+  border: solid 2px #3E383F;
+  border-radius: 5px;
+  padding: 16px 40px 16px;
   letter-spacing: 2px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-h2
-{
+h2 {
   font-size: 46px;
   letter-spacing: 2px;
   margin: 200px 0 0 ;
+}
+
+@media only screen and (max-width: 600px) {
+  .background-image {
+      width: 300px;
+      height: 300px;
+  }
 }
